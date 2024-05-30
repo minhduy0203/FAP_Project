@@ -1,4 +1,7 @@
-﻿using AutoMapper;
+﻿using AttendanceMananagmentProject.Dto.Course;
+using AttendanceMananagmentProject.Dto.Room;
+using AttendanceMananagmentProject.Models;
+using AutoMapper;
 
 namespace AttendanceMananagmentProject.Mappers
 {
@@ -6,7 +9,8 @@ namespace AttendanceMananagmentProject.Mappers
     {
         public MappingProfile()
         {
-
+            CreateMap<Course, CourseDTO>();
+            CreateMap<Room,RoomDTO>();
         }
     }
 }

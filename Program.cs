@@ -1,5 +1,7 @@
 using AttendanceMananagmentProject.Mappers;
 using AttendanceMananagmentProject.Models;
+using AttendanceMananagmentProject.Repository;
+using AttendanceMananagmentProject.Service;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,6 +30,10 @@ namespace AttendanceMananagmentProject
             ;
             services.AddSwaggerGen();
             services.AddAutoMapper(typeof(MappingProfile).Assembly);
+
+            services.AddTransient<IRoomRepository, RoomRepository>();
+            services.AddTransient<IRoomService, RoomService>();
+            services.AddTransient<ICourseRepository, CourseRepository>();
         }
     }
 }
