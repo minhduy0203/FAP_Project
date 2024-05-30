@@ -1,4 +1,5 @@
-﻿using AttendanceMananagmentProject.Models;
+﻿using AttendanceMananagmentProject.Dto.Subject;
+using AttendanceMananagmentProject.Models;
 
 namespace AttendanceMananagmentProject.Dto.Course
 {
@@ -15,6 +16,6 @@ namespace AttendanceMananagmentProject.Dto.Course
         public DateTime? EndDate { get; set; }
 
         public int SubjectId { get; set; }
-        public Subject Subject { get; set; }
+        public SubjectDTO Subject { get; set; }
     }
 }

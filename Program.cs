@@ -33,7 +33,34 @@ namespace AttendanceMananagmentProject
 
             services.AddTransient<IRoomRepository, RoomRepository>();
             services.AddTransient<IRoomService, RoomService>();
+
             services.AddTransient<ICourseRepository, CourseRepository>();
+            services.AddTransient<ICourseService, CourseService>();
+
+            services.AddTransient<IScheduleRepository, ScheduleRepository>();
+            services.AddTransient<IScheduleService, ScheduleService>();
+
+            services.AddTransient<ITeacherRepository, TeacherRepository>();
+            services.AddTransient<ITeacherService, TeacherService>();
+
+            services.AddTransient<IStudentRepository, StudentRepository>();
+            services.AddTransient<IStudentService, StudentService>();
+
+            services.AddTransient<ISubjectRepository, SubjectRepository>();
+            services.AddTransient<ISubjectService, SubjectService>();
+
+            services.AddTransient<IStudentCourseRepository, StudentCourseRepository>();
+            services.AddTransient<IStudentCourseService, StudentCourseService>();
+
+            services.AddTransient<IStudentScheduleRepository, StudentScheduleRepository>();
+            services.AddTransient<IStudentScheduleService, StudentScheduleService>();
+
+
+
+
+
+
+
         }
     }
 }

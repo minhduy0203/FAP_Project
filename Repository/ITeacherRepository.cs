@@ -7,8 +7,8 @@ namespace AttendanceMananagmentProject.Repository
         public IQueryable<Teacher> List();
         public Teacher Get(int id);
 
-        public Teacher Add(Teacher course);
-        public Teacher Delete(Teacher course);
-        public Teacher Update(Teacher course);
+        public Teacher Add(Teacher teacher);
+        public Teacher Delete(int id);
+        public Teacher Update(Teacher teacher);
     }
 }

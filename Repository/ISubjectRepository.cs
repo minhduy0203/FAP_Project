@@ -8,8 +8,8 @@ namespace AttendanceMananagmentProject.Repository
         public IQueryable<Subject> List();
         public Subject Get(int id);
 
-        public Subject Add(StudentSchedule course);
-        public Subject Delete(StudentSchedule course);
-        public Subject Update(StudentSchedule course);
+        public Subject Add(Subject subject);
+        public Subject Delete(int id);
+        public Subject Update(Subject course);
     }
 }

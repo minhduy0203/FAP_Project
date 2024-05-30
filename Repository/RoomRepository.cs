@@ -13,7 +13,8 @@ namespace AttendanceMananagmentProject.Repository
 
         public Room Add(Room room)
         {
-            dBContext.Add(room);
+            dBContext.Rooms.Add(room);
+            dBContext.SaveChanges();
             return room;
         }
 

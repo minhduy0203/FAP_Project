@@ -6,10 +6,10 @@ namespace AttendanceMananagmentProject.Repository
     {
 
         public IQueryable<StudentCourse> List();
-        public StudentCourse Get(int id);
+        public StudentCourse Get(int studentId, int courseId);
 
-        public StudentCourse Add(StudentCourse course);
-        public StudentCourse Delete(StudentCourse course);
-        public StudentCourse Update(StudentCourse course);
+        public StudentCourse Add(StudentCourse studentCourse);
+        public StudentCourse Delete(int studentId, int courseId);
+        public StudentCourse Update(StudentCourse studentCourse);
     }
 }
