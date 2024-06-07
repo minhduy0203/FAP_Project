@@ -9,9 +9,9 @@ namespace AttendanceMananagmentProject.Service
         SubjectDTO Get(int id);
         List<SubjectDTO> List();
 
-        SubjectDTO Add(Subject subject);
+        SubjectDTO Add(SubjectDTO subject);
         SubjectDTO Delete(int id);
 
-        SubjectDTO Update(Subject subject);
+        SubjectDTO Update(SubjectDTO subject);
     }
 }

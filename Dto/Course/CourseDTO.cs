@@ -17,5 +17,6 @@ namespace AttendanceMananagmentProject.Dto.Course
 
         public int SubjectId { get; set; }
         public SubjectDTO Subject { get; set; }
+
     }
 }

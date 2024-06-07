@@ -17,10 +17,10 @@ namespace AttendanceMananagmentProject.Service
             this.mapper = mapper;
         }
 
-        public RoomDTO Add(Room room)
+        public RoomDTO Add(RoomDTO room)
         {
-            Room add = roomRepository.Add(room);
-            return mapper.Map<Room, RoomDTO>(room);
+            Room add = roomRepository.Add(mapper.Map<RoomDTO, Room>(room));
+            return mapper.Map<Room, RoomDTO>(add);
         }
 
         public RoomDTO Delete(int id)
@@ -46,9 +46,17 @@ namespace AttendanceMananagmentProject.Service
 
         }
 
-        public RoomDTO Update(Room room)
+        public RoomDTO Update(RoomDTO room)
         {
-            Room update = roomRepository.Update(room);
+            Room find = roomRepository.Get(room.Id);
+            Room update = null;
+
+            if (find != null)
+            {
+                mapper.Map<RoomDTO, Room>(room, find);
+                roomRepository.Update(find);
+            }
+
             return mapper.Map<Room, RoomDTO>(update);
         }
     }

@@ -1,4 +1,5 @@
 ﻿using AttendanceMananagmentProject.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AttendanceMananagmentProject.Repository
 {
@@ -31,24 +32,24 @@ namespace AttendanceMananagmentProject.Repository
 
         public Student Get(int id)
         {
-            return dBContext.Students.FirstOrDefault(s => s.Id == id);
+            return dBContext.Students
+                .Include(s => s.StudentSchedules)
+                .FirstOrDefault(s => s.Id == id);
         }
 
         public IQueryable<Student> List()
         {
-            return dBContext.Students.AsQueryable();
+            return dBContext.Students
+                .Include(s => s.StudentSchedules)
+                .AsQueryable();
 
         }
 
         public Student Update(Student student)
         {
-            Student std = dBContext.Students.FirstOrDefault(s => s.Id == student.Id);
-            if (std != null)
-            {
-                dBContext.Students.Add(student);
-                dBContext.Entry(std).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            }
-            return std;
+            dBContext.Entry<Student>(student).State = EntityState.Modified;
+            dBContext.SaveChanges();
+            return student;
         }
     }
 }

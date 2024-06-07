@@ -1,5 +1,6 @@
 ﻿using AttendanceMananagmentProject.Dto.Course;
 using AttendanceMananagmentProject.Dto.Room;
+using AttendanceMananagmentProject.Dto.StudentSchedules;
 using AttendanceMananagmentProject.Dto.Teacher;
 using AttendanceMananagmentProject.Models;
 
@@ -19,5 +20,6 @@ namespace AttendanceMananagmentProject.Dto.Schedule
         public int RoomId { get; set; }
 
         public RoomDTO Room { get; set; }
+        public ICollection<StudentSchedulesDTO>? StudentSchedules { get; set; }
     }
 }

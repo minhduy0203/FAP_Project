@@ -8,6 +8,5 @@ namespace AttendanceMananagmentProject.Dto.Teacher
         public string Name { get; set; }
         public string Code { get; set; }
 
-        public ICollection<ScheduleDTO>? Schedules { get; set; }
     }
 }

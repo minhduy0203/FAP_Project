@@ -9,9 +9,9 @@ namespace AttendanceMananagmentProject.Service
         StudentDTO Get(int id);
         List<StudentDTO> List();
 
-        StudentDTO Add(Student student);
+        StudentDTO Add(StudentDTO student);
         StudentDTO Delete(int id);
 
-        StudentDTO Update(Student student);
+        StudentDTO Update(StudentDTO student);
     }
 }

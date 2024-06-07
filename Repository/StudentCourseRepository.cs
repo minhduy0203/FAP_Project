@@ -1,4 +1,5 @@
 ﻿using AttendanceMananagmentProject.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AttendanceMananagmentProject.Repository
 {
@@ -31,12 +32,18 @@ namespace AttendanceMananagmentProject.Repository
 
         public StudentCourse Get(int studentId, int courseId)
         {
-            return dBContext.StudentCourses.FirstOrDefault(sc => sc.StudentId == studentId && sc.CourseId == courseId);
+            return dBContext.StudentCourses
+                .Include(sc => sc.Student)
+                .Include(sc => sc.Course)
+                .FirstOrDefault(sc => sc.StudentId == studentId && sc.CourseId == courseId);
         }
 
         public IQueryable<StudentCourse> List()
         {
-            return dBContext.StudentCourses.AsQueryable();
+            return dBContext.StudentCourses
+                .Include(sc => sc.Student)
+                .Include(sc => sc.Course)
+                .AsQueryable();
         }
 
         public StudentCourse Update(StudentCourse studentCourse)
@@ -44,9 +51,8 @@ namespace AttendanceMananagmentProject.Repository
             StudentCourse sc = dBContext.StudentCourses.FirstOrDefault(sc => sc.StudentId == studentCourse.StudentId && sc.CourseId == studentCourse.CourseId);
             if (sc != null)
             {
-                dBContext.StudentCourses.Add(studentCourse);
-                dBContext.Entry(studentCourse).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-                dBContext.SaveChanges();
+                sc.StudentId = studentCourse.Student.Id;
+                sc.CourseId = studentCourse.Course.Id;
             }
             return sc;
         }

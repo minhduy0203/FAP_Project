@@ -1,4 +1,5 @@
-﻿using AttendanceMananagmentProject.Models;
+﻿using AttendanceMananagmentProject.Dto.StudentSchedules;
+using AttendanceMananagmentProject.Models;
 
 namespace AttendanceMananagmentProject.Dto.Student
 {
@@ -10,6 +11,6 @@ namespace AttendanceMananagmentProject.Dto.Student
 
         public string? Email { get; set; }
 
-        public ICollection<StudentSchedule>? StudentSchedules { get; set; }
+        public ICollection<StudentSchedulesDTO>? StudentSchedules { get; set; }
     }
 }

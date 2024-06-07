@@ -10,10 +10,10 @@ namespace AttendanceMananagmentProject.Service
         RoomDTO Get(int id);
         List<RoomDTO> List();
 
-        RoomDTO Add(Room room);
+        RoomDTO Add(RoomDTO room);
         RoomDTO Delete(int id);
 
-        RoomDTO Update(Room room);
+        RoomDTO Update(RoomDTO room);
 
 
     }

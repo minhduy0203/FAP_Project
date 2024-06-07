@@ -16,9 +16,9 @@ namespace AttendanceMananagmentProject.Service
             this.mapper = mapper;
         }
 
-        public StudentDTO Add(Student student)
+        public StudentDTO Add(StudentDTO student)
         {
-            Student add = studentRepository.Add(student);
+            Student add = studentRepository.Add(mapper.Map<StudentDTO, Student>(student));
             return mapper.Map<Student, StudentDTO>(add);
         }
 
@@ -41,9 +41,17 @@ namespace AttendanceMananagmentProject.Service
             return mapper.Map<List<Student>, List<StudentDTO>>(students);
         }
 
-        public StudentDTO Update(Student student)
+        public StudentDTO Update(StudentDTO student)
         {
-            Student update = studentRepository.Update(student);
+            Student s = studentRepository.Get(student.Id);
+            Student update = null;
+
+            if (s != null)
+            {
+                mapper.Map<StudentDTO, Student>(student, s);
+                update = studentRepository.Update(s);
+            }
+
             return mapper.Map<Student, StudentDTO>(update);
 
         }

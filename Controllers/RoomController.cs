@@ -1,4 +1,5 @@
-﻿using AttendanceMananagmentProject.Models;
+﻿using AttendanceMananagmentProject.Dto.Room;
+using AttendanceMananagmentProject.Models;
 using AttendanceMananagmentProject.Service;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,14 +36,14 @@ namespace AttendanceMananagmentProject.Controllers
 
         }
 
-        [HttpPost("Add")]
-        public IActionResult Add(Room room)
+        [HttpPost]
+        public IActionResult Add(RoomDTO room)
         {
             return Ok(roomService.Add(room));
         }
 
-        [HttpPost("Update")]
-        public IActionResult Update(Room room)
+        [HttpPut]
+        public IActionResult Update(RoomDTO room)
         {
             return Ok(roomService.Update(room));
         }

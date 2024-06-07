@@ -16,10 +16,10 @@ namespace AttendanceMananagmentProject.Service
             this.mapper = mapper;
         }
 
-        public TeacherDTO Add(Teacher teacher)
+        public TeacherDTO Add(TeacherDTO teacher)
         {
-            Teacher add = teacherRepository.Add(teacher);
-            return mapper.Map<Teacher, TeacherDTO>(teacher);
+            Teacher add = teacherRepository.Add(mapper.Map<TeacherDTO, Teacher>(teacher));
+            return mapper.Map<Teacher, TeacherDTO>(add);
         }
 
         public TeacherDTO Delete(int id)
@@ -40,9 +40,16 @@ namespace AttendanceMananagmentProject.Service
             return mapper.Map<List<Teacher>, List<TeacherDTO>>(teachers);
         }
 
-        public TeacherDTO Update(Teacher teacher)
+        public TeacherDTO Update(TeacherDTO teacher)
         {
-            Teacher update = teacherRepository.Update(teacher);
+            Teacher update = null;
+            Teacher find = teacherRepository.Get(teacher.Id);
+            if (find != null)
+            {
+                mapper.Map<TeacherDTO, Teacher>(teacher, find);
+                update = teacherRepository.Update(find);
+
+            }
             return mapper.Map<Teacher, TeacherDTO>(update);
         }
     }

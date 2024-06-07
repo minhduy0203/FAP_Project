@@ -9,9 +9,9 @@ namespace AttendanceMananagmentProject.Service
         TeacherDTO Get(int id);
         List<TeacherDTO> List();
 
-        TeacherDTO Add(Teacher teacher);
+        TeacherDTO Add(TeacherDTO teacher);
         TeacherDTO Delete(int id);
 
-        TeacherDTO Update(Teacher teacher);
+        TeacherDTO Update(TeacherDTO teacher);
     }
 }

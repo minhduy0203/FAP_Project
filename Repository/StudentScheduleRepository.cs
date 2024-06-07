@@ -1,4 +1,5 @@
 ﻿using AttendanceMananagmentProject.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AttendanceMananagmentProject.Repository
 {
@@ -31,7 +32,9 @@ namespace AttendanceMananagmentProject.Repository
 
         public StudentSchedule Get(int studentId, int scheduleId)
         {
-            return dBContext.StudentSchedules.FirstOrDefault(ss => ss.StudentId == studentId && ss.ScheduleId == scheduleId);
+            return dBContext.StudentSchedules
+                .Include(ss => ss.Schedule)
+                .FirstOrDefault(ss => ss.StudentId == studentId && ss.ScheduleId == scheduleId);
         }
 
         public IQueryable<StudentSchedule> List()
@@ -50,6 +53,17 @@ namespace AttendanceMananagmentProject.Repository
                 dBContext.SaveChanges();
             }
             return studentSchedule;
+        }
+
+        public StudentSchedule UpdateStudentAttendance(int studentId, int scheduleId, Status status)
+        {
+            StudentSchedule update = dBContext.StudentSchedules.FirstOrDefault(ss => ss.StudentId == studentId && ss.ScheduleId == scheduleId);
+            if (update != null)
+            {
+                update.Status = status;
+                dBContext.SaveChanges();
+            }
+            return update;
         }
     }
 }

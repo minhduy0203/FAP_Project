@@ -1,4 +1,5 @@
-﻿using AttendanceMananagmentProject.Dto.Course;
+﻿using AttendanceMananagmentProject.Dto;
+using AttendanceMananagmentProject.Dto.Course;
 using AttendanceMananagmentProject.Dto.StudentSchedules;
 using AttendanceMananagmentProject.Models;
 
@@ -9,9 +10,11 @@ namespace AttendanceMananagmentProject.Service
         StudentSchedulesDTO Get(int studentId, int scheduleId);
         List<StudentSchedulesDTO> List();
 
-        StudentSchedulesDTO Add(StudentSchedule studentSchedule);
+        StudentSchedulesDTO Add(StudentSchedulesDTO studentSchedule);
         StudentSchedulesDTO Delete(int studentId, int scheduleId);
 
-        StudentSchedulesDTO Update(StudentSchedule studentSchedule);
+        StudentSchedulesDTO Update(StudentSchedulesDTO studentSchedule);
+
+        Response<StudentSchedulesDTO> UpdateAttendance(int studentId, int scheduleId, bool attended);
     }
 }

@@ -1,4 +1,5 @@
-﻿using AttendanceMananagmentProject.Dto.Course;
+﻿using AttendanceMananagmentProject.Dto;
+using AttendanceMananagmentProject.Dto.Course;
 using AttendanceMananagmentProject.Dto.Room;
 using AttendanceMananagmentProject.Models;
 
@@ -13,6 +14,8 @@ namespace AttendanceMananagmentProject.Service
         CourseDTO Delete(int id);
 
         CourseDTO Update(Course course);
+        Response<CourseDTO> AddCourse(CourseDTORequest request);
 
+        String AddByCSV(List<CourseDTORequest> coursesList);
     }
 }

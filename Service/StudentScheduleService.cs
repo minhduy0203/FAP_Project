@@ -1,7 +1,10 @@
-﻿using AttendanceMananagmentProject.Dto.StudentSchedules;
+﻿using AttendanceMananagmentProject.Dto;
+using AttendanceMananagmentProject.Dto.Student;
+using AttendanceMananagmentProject.Dto.StudentSchedules;
 using AttendanceMananagmentProject.Models;
 using AttendanceMananagmentProject.Repository;
 using AutoMapper;
+using System;
 
 namespace AttendanceMananagmentProject.Service
 {
@@ -16,10 +19,10 @@ namespace AttendanceMananagmentProject.Service
             this.mapper = mapper;
         }
 
-        public StudentSchedulesDTO Add(StudentSchedule studentSchedule)
+        public StudentSchedulesDTO Add(StudentSchedulesDTO studentSchedule)
         {
-            studentScheduleRepository.Add(studentSchedule);
-            return mapper.Map<StudentSchedule, StudentSchedulesDTO>(studentSchedule);
+            StudentSchedule add = studentScheduleRepository.Add(mapper.Map<StudentSchedulesDTO, StudentSchedule>(studentSchedule));
+            return mapper.Map<StudentSchedule, StudentSchedulesDTO>(add);
         }
 
         public StudentSchedulesDTO Delete(int studentId, int scheduleId)
@@ -40,10 +43,60 @@ namespace AttendanceMananagmentProject.Service
             return mapper.Map<List<StudentSchedule>, List<StudentSchedulesDTO>>(studentSchedule);
         }
 
-        public StudentSchedulesDTO Update(StudentSchedule studentSchedule)
+        public StudentSchedulesDTO Update(StudentSchedulesDTO studentSchedule)
         {
-            StudentSchedule update = studentScheduleRepository.Update(studentSchedule);
+            StudentSchedule update = null;
+            StudentSchedule find = studentScheduleRepository.Get(studentSchedule.StudentId, studentSchedule.ScheduleId);
+            if (find != null)
+            {
+                mapper.Map<StudentSchedulesDTO, StudentSchedule>(studentSchedule, find);
+                update = studentScheduleRepository.Update(find);
+            }
+
+
             return mapper.Map<StudentSchedule, StudentSchedulesDTO>(update);
         }
+
+        public Response<StudentSchedulesDTO> UpdateAttendance(int studentId, int scheduleId, bool attended)
+        {
+            StudentSchedule update;
+            StudentSchedule studentSchedule = studentScheduleRepository.Get(studentId, scheduleId);
+            try
+            {
+                if (studentSchedule.Schedule.Date < DateTime.Now)
+                    throw new Exception("Date in the past");
+
+                if (attended)
+                {
+                    update = studentScheduleRepository.UpdateStudentAttendance(studentId, scheduleId, Status.Attended);
+
+                }
+                else
+                {
+                    update = studentScheduleRepository.UpdateStudentAttendance(studentId, scheduleId, Status.Absent);
+                }
+
+                StudentSchedulesDTO studentSchedulesDTO = mapper.Map<StudentSchedule, StudentSchedulesDTO>(update);
+                return new Response<StudentSchedulesDTO>()
+                {
+                    Data = studentSchedulesDTO,
+                    Message = "Add attendance successfully"
+                };
+            }
+
+            catch (Exception ex)
+            {
+                return new Response<StudentSchedulesDTO>()
+                {
+                    Data = null,
+                    Message = ex.Message
+                };
+
+            }
+
+
+        }
+
+
     }
 }

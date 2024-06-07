@@ -10,5 +10,7 @@ namespace AttendanceMananagmentProject.Repository
         public StudentSchedule Add(StudentSchedule studentSchedule);
         public StudentSchedule Delete(int studentId, int scheduleId);
         public StudentSchedule Update(StudentSchedule studentSchedule);
+
+        public StudentSchedule UpdateStudentAttendance(int studentId, int scheduleId, Status status);
     }
 }

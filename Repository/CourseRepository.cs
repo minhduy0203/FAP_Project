@@ -22,14 +22,14 @@ namespace AttendanceMananagmentProject.Repository
         public Course Delete(int id)
         {
             Course delete = _dbContext.Courses.FirstOrDefault((c) => c.Id == id);
-            if(delete != null)
+            if (delete != null)
             {
 
                 _dbContext.Remove(delete);
                 _dbContext.SaveChanges();
             }
             return delete;
-            
+
         }
 
         public Course Get(int id)
@@ -48,10 +48,10 @@ namespace AttendanceMananagmentProject.Repository
             if (update != null)
             {
 
-                _dbContext.Add(course);
-                _dbContext.Entry(update).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                _dbContext.Entry(update).State = Microsoft.EntityFrameworkCore.EntityState.Detached;
+                _dbContext.Courses.Update(course);
                 _dbContext.SaveChanges();
-                
+
             }
             return update;
         }

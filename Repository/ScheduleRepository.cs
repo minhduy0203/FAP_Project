@@ -1,4 +1,5 @@
 ﻿using AttendanceMananagmentProject.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AttendanceMananagmentProject.Repository
 {
@@ -31,12 +32,21 @@ namespace AttendanceMananagmentProject.Repository
 
         public Schedule Get(int id)
         {
-            return dBContext.Schedules.FirstOrDefault(r => r.Id == id);
+            return dBContext.Schedules
+                .Include(s => s.Teacher)
+                .Include(s => s.StudentSchedules)
+                .Include(s => s.Course)
+                .ThenInclude(c => c.Subject)
+                .FirstOrDefault(r => r.Id == id);
         }
 
         public IQueryable<Schedule> List()
         {
-            return dBContext.Schedules.AsQueryable();
+            return dBContext.Schedules
+                .Include(s => s.Teacher)
+                .Include(s => s.Course)
+                .ThenInclude(c => c.Subject)
+                .AsQueryable();
         }
 
         public Schedule Update(Schedule schedule)

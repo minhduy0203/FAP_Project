@@ -43,13 +43,8 @@ namespace AttendanceMananagmentProject.Repository
 
         public Room Update(Room room)
         {
-            Room update = dBContext.Rooms.FirstOrDefault(r => r.Id == room.Id);
-            if (update != null)
-            {
-                dBContext.Add(room);
-                dBContext.Entry(room).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-                dBContext.SaveChanges();
-            }
+            dBContext.Entry<Room>(room).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            dBContext.SaveChanges();
             return room;
         }
     }

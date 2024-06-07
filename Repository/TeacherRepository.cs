@@ -41,13 +41,9 @@ namespace AttendanceMananagmentProject.Repository
 
         public Teacher Update(Teacher teacher)
         {
-            Teacher update = dBContext.Teachers.FirstOrDefault(t => t.Id == teacher.Id);
-            if (teacher != null)
-            {
-                dBContext.Teachers.Add(teacher);
-                dBContext.Entry(teacher).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            }
-            return update;
+            dBContext.Entry<Teacher>(teacher).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            dBContext.SaveChanges();
+            return teacher;
         }
     }
 }

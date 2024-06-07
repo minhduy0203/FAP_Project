@@ -4,6 +4,8 @@ using AttendanceMananagmentProject.Repository;
 using AttendanceMananagmentProject.Service;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OData.Edm;
+using Microsoft.OData.ModelBuilder;
 
 namespace AttendanceMananagmentProject
 {
@@ -26,8 +28,11 @@ namespace AttendanceMananagmentProject
         {
             services
               .AddControllers()
-              .AddOData(opt => opt.Select().Filter().Expand().OrderBy());
+              .AddOData(opt => opt.Select().Filter().Expand().OrderBy().Count().SetMaxTop(10).AddRouteComponents("odata", GetEdmModel())
+
+              );
             ;
+
             services.AddSwaggerGen();
             services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
@@ -60,7 +65,15 @@ namespace AttendanceMananagmentProject
 
 
 
+        }
 
+        public static IEdmModel GetEdmModel()
+        {
+            ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
+            builder.EntitySet<Room>("Rooms");
+            builder.EntitySet<StudentSchedule>("StudentSchedules").EntityType.HasKey(ss => new { ss.ScheduleId, ss.StudentId });
+            builder.EntitySet<Student>("Students");
+            return builder.GetEdmModel();
         }
     }
 }

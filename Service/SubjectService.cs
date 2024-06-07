@@ -16,9 +16,9 @@ namespace AttendanceMananagmentProject.Service
             this.mapper = mapper;
         }
 
-        public SubjectDTO Add(Subject subject)
+        public SubjectDTO Add(SubjectDTO subject)
         {
-            Subject add = subjectRepository.Add(subject);
+            Subject add = subjectRepository.Add(mapper.Map<SubjectDTO, Subject>(subject));
             return mapper.Map<Subject, SubjectDTO>(add);
         }
 
@@ -40,9 +40,16 @@ namespace AttendanceMananagmentProject.Service
             return mapper.Map<List<Subject>, List<SubjectDTO>>(subjects);
         }
 
-        public SubjectDTO Update(Subject subject)
+        public SubjectDTO Update(SubjectDTO subject)
         {
-            Subject update = subjectRepository.Update(subject);
+            Subject find = subjectRepository.Get(subject.Id);
+            Subject update = null;
+            if (find != null)
+            {
+                mapper.Map<SubjectDTO, Subject>(subject, find);
+                update = subjectRepository.Update(find);
+            }
+
             return mapper.Map<Subject, SubjectDTO>(update);
         }
     }
