@@ -35,6 +35,19 @@ namespace AttendanceMananagmentProject.Controllers
 
         }
 
+        [HttpGet("Student")]
+        public IActionResult GetStudentSchedule(int week, int year, int sid)
+        {
+            return Ok(scheduleService.ListStudentSchedule(week, year, sid));
+        }
+
+        [HttpGet("Teacher")]
+        public IActionResult GetTeacherSchedule(int week, int year, int sid)
+        {
+            return Ok(scheduleService.ListTeacherSchedule(week, year, sid));
+        }
+
+
         [HttpPost("Add")]
         public IActionResult Add(Schedule schedule)
         {

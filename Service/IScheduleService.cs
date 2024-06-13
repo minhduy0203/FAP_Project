@@ -13,5 +13,11 @@ namespace AttendanceMananagmentProject.Service
         ScheduleDTO Delete(int id);
 
         ScheduleDTO Update(Schedule schedule);
+
+        List<ScheduleDTO> ListStudentSchedule(int week, int year, int sid);
+        List<ScheduleDTO> ListTeacherSchedule(int week, int year, int tid);
+
+
+
     }
 }

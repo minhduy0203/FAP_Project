@@ -25,7 +25,7 @@ namespace AttendanceMananagmentProject.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                var conStr = "server=LAPTOP-MN7VKOQ5;database=AttendanceApp;uid=sa;pwd=123;";
+                var conStr = "Server=localhost;Database=AttendanceApp;Integrated Security=True;";
                 optionsBuilder.UseSqlServer(conStr);
             }
 

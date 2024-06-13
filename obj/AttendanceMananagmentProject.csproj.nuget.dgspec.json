@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FPT\\Semester_8\\PRN231\\Code\\AttendanceMananagmentProject\\AttendanceMananagmentProject\\AttendanceMananagmentProject.csproj": {}
+    "E:\\DEV\\Work\\FAP_Project\\AttendanceMananagmentProject.csproj": {}
   },
   "projects": {
-    "E:\\FPT\\Semester_8\\PRN231\\Code\\AttendanceMananagmentProject\\AttendanceMananagmentProject\\AttendanceMananagmentProject.csproj": {
+    "E:\\DEV\\Work\\FAP_Project\\AttendanceMananagmentProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FPT\\Semester_8\\PRN231\\Code\\AttendanceMananagmentProject\\AttendanceMananagmentProject\\AttendanceMananagmentProject.csproj",
+        "projectUniqueName": "E:\\DEV\\Work\\FAP_Project\\AttendanceMananagmentProject.csproj",
         "projectName": "AttendanceMananagmentProject",
-        "projectPath": "E:\\FPT\\Semester_8\\PRN231\\Code\\AttendanceMananagmentProject\\AttendanceMananagmentProject\\AttendanceMananagmentProject.csproj",
-        "packagesPath": "C:\\Users\\minhd\\.nuget\\packages\\",
-        "outputPath": "E:\\FPT\\Semester_8\\PRN231\\Code\\AttendanceMananagmentProject\\AttendanceMananagmentProject\\obj\\",
+        "projectPath": "E:\\DEV\\Work\\FAP_Project\\AttendanceMananagmentProject.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "E:\\DEV\\Work\\FAP_Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\minhd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -82,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

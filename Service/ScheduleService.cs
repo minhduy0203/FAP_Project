@@ -1,7 +1,10 @@
 ﻿using AttendanceMananagmentProject.Dto.Schedule;
 using AttendanceMananagmentProject.Models;
 using AttendanceMananagmentProject.Repository;
+using AttendanceMananagmentProject.Utils;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography;
 
 namespace AttendanceMananagmentProject.Service
 {
@@ -9,12 +12,14 @@ namespace AttendanceMananagmentProject.Service
     {
 
         private IScheduleRepository scheduleRepository;
+        private IStudentRepository studentRepository;
         private IMapper mapper;
 
-        public ScheduleService(IScheduleRepository scheduleRepository, IMapper mapper)
+        public ScheduleService(IScheduleRepository scheduleRepository, IMapper mapper, IStudentRepository studentRepository)
         {
             this.scheduleRepository = scheduleRepository;
             this.mapper = mapper;
+            this.studentRepository = studentRepository;
         }
 
         public ScheduleDTO Add(Schedule schedule)
@@ -39,6 +44,38 @@ namespace AttendanceMananagmentProject.Service
         {
             List<Schedule> schedules = scheduleRepository.List().ToList();
             return mapper.Map<List<Schedule>, List<ScheduleDTO>>(schedules);
+        }
+
+        public List<ScheduleDTO> ListStudentSchedule(int week, int year, int sid)
+        {
+            DateTime from = ScheduleLogic.GetDateByWeek(week, year);
+            DateTime to = from.AddDays(6);
+            List<Schedule> schedules = studentRepository
+                .List()
+                .Include(s => s.StudentCourses)
+                .ThenInclude(s => s.Course)
+                .Include(s => s.StudentSchedules)
+                .ThenInclude(ss => ss.Schedule)
+                .FirstOrDefault(s => s.Id == sid)
+                .StudentSchedules
+                .Where(ss => ss.Schedule.Date >= from && ss.Schedule.Date <= to)
+                .Select(ss => ss.Schedule)
+                .ToList();
+                ;
+            return mapper.Map<List<Schedule>, List<ScheduleDTO>>(schedules);
+
+        }
+
+        public List<ScheduleDTO> ListTeacherSchedule(int week, int year, int tid)
+        {
+            DateTime from = ScheduleLogic.GetDateByWeek(week, year);
+            DateTime to = from.AddDays(6);
+            List<Schedule> schedules = scheduleRepository
+                  .List()
+                  .Where(s => s.TeacherId == tid && (s.Date >= from && s.Date <= to))
+                  .ToList();
+            return mapper.Map<List<Schedule>, List<ScheduleDTO>>(schedules);
+
         }
 
         public ScheduleDTO Update(Schedule schedule)

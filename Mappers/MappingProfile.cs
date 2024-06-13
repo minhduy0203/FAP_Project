@@ -41,6 +41,8 @@ namespace AttendanceMananagmentProject.Mappers
                     Code = src.Course.Code,
                     Name = src.Course.Name,
                     StartDate = src.Course.StartDate,
+                    TimeSlot = src.Course.TimeSlot,
+                    //Subject = new SubjectDTO { Name = src.Course.Subject.Name}
 
 
                 }))
