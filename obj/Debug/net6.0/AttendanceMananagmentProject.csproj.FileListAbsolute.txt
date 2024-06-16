@@ -147,3 +147,4 @@ E:\DEV\Work\FAP_Project\obj\Debug\net6.0\refint\AttendanceMananagmentProject.dll
 E:\DEV\Work\FAP_Project\obj\Debug\net6.0\AttendanceMananagmentProject.pdb
 E:\DEV\Work\FAP_Project\obj\Debug\net6.0\AttendanceMananagmentProject.genruntimeconfig.cache
 E:\DEV\Work\FAP_Project\obj\Debug\net6.0\ref\AttendanceMananagmentProject.dll
+E:\DEV\Work\FAP_Project\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

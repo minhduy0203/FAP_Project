@@ -1,10 +1,12 @@
 ﻿using AttendanceMananagmentProject.Dto.Room;
 using AttendanceMananagmentProject.Models;
 using AttendanceMananagmentProject.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AttendanceMananagmentProject.Controllers
 {
+    [Authorize(Roles = "ADMIN")]
     [ApiController]
     [Route("/api/[controller]")]
     public class RoomController : Controller

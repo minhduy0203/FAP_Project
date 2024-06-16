@@ -2,10 +2,14 @@ using AttendanceMananagmentProject.Mappers;
 using AttendanceMananagmentProject.Models;
 using AttendanceMananagmentProject.Repository;
 using AttendanceMananagmentProject.Service;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OData.Edm;
 using Microsoft.OData.ModelBuilder;
+using System.Text;
 
 namespace AttendanceMananagmentProject
 {
@@ -16,8 +20,26 @@ namespace AttendanceMananagmentProject
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddDbContext<MyDBContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("Mystr")));
             ConfigureService(builder.Services);
+            builder.Services
+                .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
+
             var app = builder.Build();
             //middleware
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseSwagger();
             app.UseSwaggerUI();
             app.MapControllers();
@@ -60,7 +82,8 @@ namespace AttendanceMananagmentProject
             services.AddTransient<IStudentScheduleRepository, StudentScheduleRepository>();
             services.AddTransient<IStudentScheduleService, StudentScheduleService>();
 
-
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IUserService, UserService>();
 
 
 
