@@ -45,5 +45,11 @@ namespace AttendanceMananagmentProject.Controllers
         {
             return Ok(studentCourseService.Update(studentCourse));
         }
+
+        [HttpGet("List/Student/{id}")]
+        public IActionResult ListByStudentId(int id)
+        {
+            return Ok(studentCourseService.ListByStudentId(id));
+        }
     }
 }

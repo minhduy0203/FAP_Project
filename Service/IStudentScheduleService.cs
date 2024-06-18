@@ -16,5 +16,8 @@ namespace AttendanceMananagmentProject.Service
         StudentSchedulesDTO Update(StudentSchedulesDTO studentSchedule);
 
         Response<StudentSchedulesDTO> UpdateAttendance(int studentId, int scheduleId, bool attended);
-    }
+
+        Response<List<StudentSchedulesDTO>> AddListAttendanceStudent(StudentScheduleListDto request);
+
+	}
 }

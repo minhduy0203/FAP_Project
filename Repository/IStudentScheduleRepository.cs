@@ -12,5 +12,7 @@ namespace AttendanceMananagmentProject.Repository
         public StudentSchedule Update(StudentSchedule studentSchedule);
 
         public StudentSchedule UpdateStudentAttendance(int studentId, int scheduleId, Status status);
-    }
+        public List<StudentSchedule> UpdateListStudentAttendance(List<int> sid, int scheduleId, List<Status> statuses);
+
+	}
 }

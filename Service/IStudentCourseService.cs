@@ -4,14 +4,16 @@ using AttendanceMananagmentProject.Models;
 
 namespace AttendanceMananagmentProject.Service
 {
-    public interface IStudentCourseService
-    {
-        StudentCourseDTO Get(int sid,int cid);
-        List<StudentCourseDTO> List();
+	public interface IStudentCourseService
+	{
+		StudentCourseDTO Get(int sid, int cid);
+		List<StudentCourseDTO> List();
 
-        StudentCourseDTO Add(StudentCourse sc);
-        StudentCourseDTO Delete(int sid, int cid);
+		StudentCourseDTO Add(StudentCourse sc);
+		StudentCourseDTO Delete(int sid, int cid);
 
-        StudentCourseDTO Update(StudentCourse sc);
-    }
+		StudentCourseDTO Update(StudentCourse sc);
+		List<StudentCourseDTO> ListByStudentId(int id);
+
+	}
 }

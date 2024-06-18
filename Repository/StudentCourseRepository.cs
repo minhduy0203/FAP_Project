@@ -34,6 +34,8 @@ namespace AttendanceMananagmentProject.Repository
         {
             return dBContext.StudentCourses
                 .Include(sc => sc.Student)
+                .ThenInclude(s => s.StudentSchedules)
+                .ThenInclude(s => s.Schedule)
                 .Include(sc => sc.Course)
                 .FirstOrDefault(sc => sc.StudentId == studentId && sc.CourseId == courseId);
         }
