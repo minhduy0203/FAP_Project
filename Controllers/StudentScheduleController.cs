@@ -58,5 +58,11 @@ namespace AttendanceMananagmentProject.Controllers
 		{
 			return Ok(studentScheduleService.AddListAttendanceStudent(request));
 		}
+
+		[HttpGet("List/Student")]
+		public IActionResult GetStudentSchedule(int sid, int cid)
+		{
+			return Ok(studentScheduleService.GetListByCourseIdAndStudentId(sid, cid));
+		}
 	}
 }

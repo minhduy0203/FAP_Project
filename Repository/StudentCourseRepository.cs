@@ -36,6 +36,7 @@ namespace AttendanceMananagmentProject.Repository
                 .Include(sc => sc.Student)
                 .ThenInclude(s => s.StudentSchedules)
                 .ThenInclude(s => s.Schedule)
+                .ThenInclude(ss => ss.Course)
                 .Include(sc => sc.Course)
                 .FirstOrDefault(sc => sc.StudentId == studentId && sc.CourseId == courseId);
         }

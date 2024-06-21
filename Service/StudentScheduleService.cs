@@ -4,6 +4,8 @@ using AttendanceMananagmentProject.Dto.StudentSchedules;
 using AttendanceMananagmentProject.Models;
 using AttendanceMananagmentProject.Repository;
 using AutoMapper;
+using Microsoft.AspNetCore.OData.Query;
+using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace AttendanceMananagmentProject.Service
@@ -107,6 +109,17 @@ namespace AttendanceMananagmentProject.Service
 				Data = response,
 				Message = "Add successfully"
 			};
+
+		}
+
+		public List<AttendanceDto> GetListByCourseIdAndStudentId(int sid, int cid)
+		{
+			List<StudentSchedule> list = studentScheduleRepository.List()
+				.Include(ss => ss.Schedule)
+				.Include(ss => ss.Student)
+				.Where(ss => ss.StudentId == sid && ss.Schedule.CourseId == cid)
+				.ToList();
+			return mapper.Map<List<StudentSchedule>, List<AttendanceDto>>(list);
 
 		}
 

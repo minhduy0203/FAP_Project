@@ -67,6 +67,7 @@ namespace AttendanceMananagmentProject.Mappers
 				}))
 				;
 			CreateMap<StudentSchedule, StudentSchedulesDTO>();
+			CreateMap<StudentSchedule, AttendanceDto>();
 
 
 			CreateMap<StudentDTO, Student>()

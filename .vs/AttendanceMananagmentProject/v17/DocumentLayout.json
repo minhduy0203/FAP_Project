@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "E:\\DEV\\Work\\FAP_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|e:\\dev\\work\\fap_project\\controllers\\studentcoursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|solutionrelative:controllers\\studentcoursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|e:\\dev\\work\\fap_project\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|solutionrelative:controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|e:\\dev\\work\\fap_project\\service\\istudentcourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|solutionrelative:service\\istudentcourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|e:\\dev\\work\\fap_project\\controllers\\studentschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|solutionrelative:controllers\\studentschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|e:\\dev\\work\\fap_project\\service\\studentcourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|solutionrelative:service\\studentcourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|e:\\dev\\work\\fap_project\\dto\\studentschedules\\attendancedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|solutionrelative:dto\\studentschedules\\attendancedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|e:\\dev\\work\\fap_project\\service\\studentscheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|solutionrelative:service\\studentscheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|e:\\dev\\work\\fap_project\\dto\\studentschedules\\studentschedulesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|solutionrelative:dto\\studentschedules\\studentschedulesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|e:\\dev\\work\\fap_project\\repository\\studentcourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|solutionrelative:repository\\studentcourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|e:\\dev\\work\\fap_project\\mappers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|solutionrelative:mappers\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|e:\\dev\\work\\fap_project\\controllers\\schedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|solutionrelative:controllers\\schedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|e:\\dev\\work\\fap_project\\service\\istudentscheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57439E08-0AFF-4B0F-9D33-AD86248947C0}|AttendanceMananagmentProject.csproj|solutionrelative:service\\istudentscheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +38,98 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StudentCourseController.cs",
-              "DocumentMoniker": "E:\\DEV\\Work\\FAP_Project\\Controllers\\StudentCourseController.cs",
-              "RelativeDocumentMoniker": "Controllers\\StudentCourseController.cs",
-              "ToolTip": "E:\\DEV\\Work\\FAP_Project\\Controllers\\StudentCourseController.cs",
-              "RelativeToolTip": "Controllers\\StudentCourseController.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAwBQAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T15:49:52.862Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IStudentCourseService.cs",
-              "DocumentMoniker": "E:\\DEV\\Work\\FAP_Project\\Service\\IStudentCourseService.cs",
-              "RelativeDocumentMoniker": "Service\\IStudentCourseService.cs",
-              "ToolTip": "E:\\DEV\\Work\\FAP_Project\\Service\\IStudentCourseService.cs",
-              "RelativeToolTip": "Service\\IStudentCourseService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAACAAAA",
+              "Title": "StudentScheduleController.cs",
+              "DocumentMoniker": "E:\\DEV\\Work\\FAP_Project\\Controllers\\StudentScheduleController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentScheduleController.cs",
+              "ToolTip": "E:\\DEV\\Work\\FAP_Project\\Controllers\\StudentScheduleController.cs",
+              "RelativeToolTip": "Controllers\\StudentScheduleController.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAowD0AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T15:49:37.206Z",
+              "WhenOpened": "2024-06-21T02:58:58.291Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "StudentCourseService.cs",
-              "DocumentMoniker": "E:\\DEV\\Work\\FAP_Project\\Service\\StudentCourseService.cs",
-              "RelativeDocumentMoniker": "Service\\StudentCourseService.cs",
-              "ToolTip": "E:\\DEV\\Work\\FAP_Project\\Service\\StudentCourseService.cs",
-              "RelativeToolTip": "Service\\StudentCourseService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA6AAAA",
+              "DocumentIndex": 6,
+              "Title": "IStudentScheduleService.cs",
+              "DocumentMoniker": "E:\\DEV\\Work\\FAP_Project\\Service\\IStudentScheduleService.cs",
+              "RelativeDocumentMoniker": "Service\\IStudentScheduleService.cs",
+              "ToolTip": "E:\\DEV\\Work\\FAP_Project\\Service\\IStudentScheduleService.cs",
+              "RelativeToolTip": "Service\\IStudentScheduleService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T15:48:09.591Z",
+              "WhenOpened": "2024-06-21T02:51:41.454Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StudentSchedulesDTO.cs",
-              "DocumentMoniker": "E:\\DEV\\Work\\FAP_Project\\Dto\\StudentSchedules\\StudentSchedulesDTO.cs",
-              "RelativeDocumentMoniker": "Dto\\StudentSchedules\\StudentSchedulesDTO.cs",
-              "ToolTip": "E:\\DEV\\Work\\FAP_Project\\Dto\\StudentSchedules\\StudentSchedulesDTO.cs",
-              "RelativeToolTip": "Dto\\StudentSchedules\\StudentSchedulesDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "E:\\DEV\\Work\\FAP_Project\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CourseController.cs",
+              "ToolTip": "E:\\DEV\\Work\\FAP_Project\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Controllers\\CourseController.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAvwDsAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T15:39:56.365Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StudentCourseRepository.cs",
-              "DocumentMoniker": "E:\\DEV\\Work\\FAP_Project\\Repository\\StudentCourseRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\StudentCourseRepository.cs",
-              "ToolTip": "E:\\DEV\\Work\\FAP_Project\\Repository\\StudentCourseRepository.cs",
-              "RelativeToolTip": "Repository\\StudentCourseRepository.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAewCUAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T15:29:15.996Z",
+              "WhenOpened": "2024-06-21T02:49:20.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ScheduleController.cs",
-              "DocumentMoniker": "E:\\DEV\\Work\\FAP_Project\\Controllers\\ScheduleController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ScheduleController.cs",
-              "ToolTip": "E:\\DEV\\Work\\FAP_Project\\Controllers\\ScheduleController.cs",
-              "RelativeToolTip": "Controllers\\ScheduleController.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAIwCgAAAA5AAAA",
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "E:\\DEV\\Work\\FAP_Project\\Mappers\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Mappers\\MappingProfile.cs",
+              "ToolTip": "E:\\DEV\\Work\\FAP_Project\\Mappers\\MappingProfile.cs",
+              "RelativeToolTip": "Mappers\\MappingProfile.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAgwEQAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T16:48:26.697Z"
+              "WhenOpened": "2024-06-21T02:51:09.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentSchedulesDTO.cs",
+              "DocumentMoniker": "E:\\DEV\\Work\\FAP_Project\\Dto\\StudentSchedules\\StudentSchedulesDTO.cs",
+              "RelativeDocumentMoniker": "Dto\\StudentSchedules\\StudentSchedulesDTO.cs",
+              "ToolTip": "E:\\DEV\\Work\\FAP_Project\\Dto\\StudentSchedules\\StudentSchedulesDTO.cs",
+              "RelativeToolTip": "Dto\\StudentSchedules\\StudentSchedulesDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T02:50:46.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AttendanceDto.cs",
+              "DocumentMoniker": "E:\\DEV\\Work\\FAP_Project\\Dto\\StudentSchedules\\AttendanceDto.cs",
+              "RelativeDocumentMoniker": "Dto\\StudentSchedules\\AttendanceDto.cs",
+              "ToolTip": "E:\\DEV\\Work\\FAP_Project\\Dto\\StudentSchedules\\AttendanceDto.cs",
+              "RelativeToolTip": "Dto\\StudentSchedules\\AttendanceDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T02:50:43.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentScheduleService.cs",
+              "DocumentMoniker": "E:\\DEV\\Work\\FAP_Project\\Service\\StudentScheduleService.cs",
+              "RelativeDocumentMoniker": "Service\\StudentScheduleService.cs",
+              "ToolTip": "E:\\DEV\\Work\\FAP_Project\\Service\\StudentScheduleService.cs",
+              "RelativeToolTip": "Service\\StudentScheduleService.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAuwHEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T02:48:24.82Z",
+              "EditorCaption": ""
             }
           ]
         }
